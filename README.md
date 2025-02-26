@@ -1,9 +1,14 @@
 # Template Project - Elzero Web School
 
-📌 **A work-in-progress training project based on a template 4 from [Elzero Web School](https://www.youtube.com/c/ElzeroWebSchool).**  
+📌 **A work-in-progress training project based on a template from [Elzero Web School](https://www.youtube.com/c/ElzeroWebSchool).**  
 This project is designed to enhance my **HTML & CSS** skills by modifying and adding new features to the original template.
 
 🚧 **Status:** _Under Construction_ 🚧  
+
+---
+
+## 🔗 Live Demo  
+👉 **[View Online](https://taky5566.github.io/template/)**  
 
 ---
 
