@@ -1,7 +1,7 @@
 # Template Project - Elzero Web School
 
 📌 **A work-in-progress training project based on a template from [Elzero Web School](https://www.youtube.com/@ElzeroWebSchool).**  
-This project is designed to enhance my **HTML & CSS** skills by modifying and adding new features to the original template.
+👉 "This project is built from scratch, inspired by the original template from Elzero Web School, with additional modifications and improvements."
 
 🚧 **Status:** _Under Construction_ 🚧  
 
