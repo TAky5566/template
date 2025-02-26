@@ -522,8 +522,8 @@ font-size: 14px;
 }
 .last-project-progress li::before {
   content: "";
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   display: block;
   border-radius: 50%;
   background-color: white;
@@ -587,8 +587,8 @@ animation: change-color 1s linear infinite alternate;
   color: var(--grey-color);
 }
 .reminder ul li .button{/**/
-  width: 15px;
-  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
   border-radius: 50%;
 }
 /******************************/
@@ -696,6 +696,10 @@ color: red;
       }
       tbody 
       {
+        tr:hover td{
+          background-color: #faf7f7;
+        }
+        
         td{
           padding: 15px;
           border-right: 1px solid #eee;
@@ -703,9 +707,6 @@ color: red;
           transition: 0.3s;
           &:first-of-type{
             border-left: 1px solid #eee;
-          }
-          tr:hover td{
-            background-color: #faf7f7;
           }
           span{
             color: white
