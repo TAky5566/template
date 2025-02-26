@@ -354,7 +354,15 @@ display: flex;
   border: solid 8px;
   border-color: var(--blue-alt-color) transparent transparent;
 }
-
+@media (max-width:440px) {
+  .content .wrapper .Target .progress-info .progres-bar .progres::before{
+    bottom: -30px;
+  }
+  .content .wrapper .Target .progress-info .progres-bar .progres::after{
+    top: 0;
+    border-color:  transparent transparent var(--blue-alt-color);
+  }
+}
 .orange{
   background-color: rgb(245 158 11 / 20%);
 }
