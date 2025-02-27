@@ -834,3 +834,21 @@ background-color: #ccc;
   left: 62px;
   content: "\f00c";
 }
+@media (max-width:767px) {
+  .profile {
+    padding-top: 20px;
+    flex-direction: column;
+    text-align: center;
+    .profile-info{
+      border: none;
+    }
+      .box{
+  justify-content: center;
+
+  div:last-of-type{
+      display: flex;
+      justify-content: center;
+      }
+    }
+  }
+}
