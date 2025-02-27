@@ -151,6 +151,9 @@ font-size: 13px;
   .font-b{
     font-weight: bold;
   }
+  .fs-13{
+    font-size: 13px;
+  }
   /********************************/
   .g-10{
     gap: 10px; 
