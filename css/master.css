@@ -46,6 +46,7 @@ ul {
   background-color: var(--card-background);
   overflow: hidden;
 }
+
 .sidebar > h3 {
   margin: 0 0 50px 0;
   text-align: center;
@@ -83,26 +84,28 @@ ul {
 .sidebar ul li i {
   margin-right: 10px;
 }
-@media (max-width: 767px) {
-  .sidebar a span {
+@media(max-width: 767px) {
+  .sidebar ul li a span {
       display: none;
   }
   .sidebar {
       width: 85px;
       padding: 10px;
   }
-  .sidebar > h3 {
+  .sidebar>h3 {
       font-size: 13px;
       margin: 0;
   }
-  .sidebar > h3::before,
-  .sidebar > h3::after {
+  .sidebar>h3::before,
+  .sidebar>h3::after {
       display: none;
   }
-  .sidebar li {
-    width: fit-content;
+  .sidebar ul li{
+  display: flex;
+  justify-content: center;
   }
-  .sidebar i {
+
+  .sidebar ul li i {
     margin: 0!important;
   }
 }
