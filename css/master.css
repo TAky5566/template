@@ -267,6 +267,7 @@ ul {
       margin-left: 10px;
       margin-right: 10px;
       gap: 10px;
+      padding: 10px;
   }
   .content .wrapper .welcome .info-section {
       flex-direction: column;
@@ -639,7 +640,7 @@ color: red;
 
 .social-media-stats {
   a{
-    min-width: 60px;
+    width: 80px;
     text-align: center;
   }
   .box.twitter{
@@ -685,6 +686,7 @@ color: red;
   @media(max-width:440px){
   .box {
    justify-content: space-between;
+   padding-right: 10px;
   }
   span{
     display: none;
@@ -723,7 +725,7 @@ color: red;
           span{
             padding: 3px  5px ;
             border: 1px solid;
-            border-radius: 3px;
+            border-radius: 7px;
           }
           &.pending span{
             border-color: var(--orange-color);
@@ -808,50 +810,13 @@ flex-direction: column;
   }
 }
 .profile .info .box  div{
-width: 250px;
-padding-top: 10px;
-}
-.profile .info .box  div label{
-display: block;
-height: 20px;
-width: 78px;
-border-radius: 10px;
-position: relative;
-transition: 0.3s;
-background-color: #ccc;
+  width: 250px;
+  padding-top: 10px;
 
-}
-.profile .info .box  div label::before{
-  font-family: "Font Awesome 6 Free";
-  content: "\f00d";
-  font-weight: 900;
-  font-size: 10px;
-  
-  background-color: white;
-  color: #aaa;
-  
-  width: 12px;
-  height: 12px;
-  
-  position: absolute;
-  left:  4px;
-  top: 50%;
-  transform: translateY(-50%);
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
+  label{
+    height: 20px;
+  }
 
-  border-radius: 50%;
-}
-
-.profile .info .box  div input:checked+label{
-  background-color: #0075ff;
-}
-.profile .info .box  div input:checked+label::before{
-  left: 62px;
-  content: "\f00c";
 }
 @media (max-width:767px) {
   .profile {
@@ -1027,7 +992,6 @@ background-color: #ccc;
   .wrapper .project .job{
     flex-direction: column;
     gap: 15px;
-
     span{
       width: fit-content;
       margin-left: 5px;
@@ -1084,10 +1048,206 @@ background-color: #ccc;
     padding: 5px 0 0 ;
   }
 }
-@media (max-width:400px) {
+@media (max-width:440px) {
   .courses-page{
     grid-template-columns: repeat(auto-fill,minmax(200px , 1fr));
     margin: 0 10px;
     gap: 10px;
   }
 }
+/********************************/
+.setting-page   {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+  .switch-toggle {
+    label{
+      border-radius: 17px;
+      height: 32px;
+      &::before{
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+      }
+    }
+    input:checked+label::before{
+      left: 50px;
+    }
+  }
+  .close-message{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    height: 150px;
+    resize: none;
+  }
+}
+@media (max-width:767px) {
+  .setting-page{
+  grid-template-columns:minmax(100px,1fr);
+  margin-left: 10px;
+  margin-right: 10px;
+  gap: 10px;
+}
+}
+@media (max-width:440px) {
+  .site-control>div{
+    flex-direction: column;
+    .switch-toggle{
+      margin-top: 10px;
+    }
+  }
+}
+/*************************************/
+.general-info div {
+  input{
+    border:1px solid #ccc;
+  } 
+  &:last-of-type input{
+    background-color: #f0f4f8;
+    color: #aaa;
+    display: inline-block;
+    margin-right: 15px;
+    cursor: not-allowed;
+      &+a{
+        color: var(--blue-color);
+      }
+  }
+}
+/**************************/
+
+.security-info .row{
+  .text span{
+    display: block;
+    margin-bottom: 13px;
+  }
+  &:not(:last-of-type){
+    border-bottom: 1px solid #eee;
+  }
+}
+.security-info input:checked+label::before{
+  color: var(--blue-color);
+}
+.security-info  a.c-white{
+  transition: 0.3s;
+}
+.security-info a.c-white:hover{
+background-color: var(--blue-alt-color)!important;
+}
+/*************************/
+.social-info .row{
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+}
+.social-info i{
+width: 40px;
+height: 40px;
+border-right: 1px solid  #ddd;
+transition: 0.3s;
+}
+.social-info  input{
+  border: none;
+  background-color: transparent;
+}
+.social-info  .row:focus-within i{
+  color: black;
+}
+/*****************************/
+.widget-control label{
+  padding-left: 30px;
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border: 2px solid ;
+    transition: 0.2s;
+  }
+  &::before{
+    border-color: var(--grey-color);
+  }
+  &::after{
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-size: 14px;
+    color: white;
+    border-color: var(--blue-color);
+    background-color: var(--blue-color);
+    scale: 0;
+    transform: rotate(360deg);
+  }
+  &:hover::before{
+    border-color: var(--blue-color);
+  }
+}
+.widget-control input:checked+label::after{
+  scale: 1;
+  transform: rotate(0);
+}
+/*******************************/
+.backup-manger .ratios {
+  border-bottom: 1px solid #eee;
+  label{
+    padding-left: 30px;
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+    &::before{
+      border: 2px solid ;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-color: var(--grey-color);
+    }
+    &::after{
+      content: "";
+      left: 11px;
+      top: 11px;
+      width: 0px;
+      height: 0px;
+      transform: translate(-50%, -50%);
+      background-color: var(--blue-color);
+    }
+    &:hover::before,
+    &::after{
+      border-color: var(--blue-color);
+    }
+  }
+}
+
+.backup-manger .ratios input:checked+label{
+  &::after{
+    width: 11px;
+    height: 11px;
+  }
+  &::before{
+    border-color: var(--blue-color);
+  }
+}
+.backup-manger .servers {
+  text-align: center;
+  label{
+    border: 2px solid #eee;
+    padding: 15px;
+    border-radius: 7px;
+  }
+  input:checked+label{
+    color: var(--blue-color);
+    border-color: var(--blue-color);
+  }
+}
+@media (max-width:767px) {
+  .backup-manger .servers {
+    flex-wrap: wrap;
+  }
+}
+/************************************/
+
