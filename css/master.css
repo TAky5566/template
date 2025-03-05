@@ -1250,4 +1250,54 @@ transition: 0.3s;
   }
 }
 /************************************/
-
+.friends-page{
+ display: grid;
+ grid-template-columns: repeat(auto-fill,minmax(300px , 1fr)); 
+}
+@media (max-width:767px){
+.friends-page{
+gap: 10px;
+grid-template-columns:minmax(100px , 1fr);
+margin-left: 10px;
+margin-right: 10px;
+}
+}
+.friends-page .friend{
+    .contact{
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      i{
+        background-color: #eee;
+        color: #666;
+        border-radius: 50%;
+        transition: 0.3s;
+        &:hover{
+          background-color: var(--blue-color);
+          color: white;
+        }
+      }
+    }
+    .txt-c{
+      justify-self: center;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      img{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .user-info{
+      position: relative;
+      border-bottom: 1px solid #eee;
+      .vib{
+        opacity: 0.5;
+        font-size: 40px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
